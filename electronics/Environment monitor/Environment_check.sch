@@ -1,0 +1,569 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 8500 11000 portrait
+encoding utf-8
+Sheet 1 1
+Title "Algae growth environment Monitor"
+Date ""
+Rev ""
+Comp ""
+Comment1 "Yehor Pererva"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Environment_check-rescue:BluePill-modules Module1
+U 1 1 5B8A1FA9
+P 5250 2050
+F 0 "Module1" H 5250 3265 50  0000 C CNN
+F 1 "BluePill" H 5250 3174 50  0000 C CNN
+F 2 "modules:BluePill" H 5250 2050 50  0001 C CNN
+F 3 "" H 5250 2050 50  0001 C CNN
+	1    5250 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Environment_check-rescue:ILI9341_2.8_TFT-Adafruit_modules U4
+U 1 1 5B8A2002
+P 3050 1750
+F 0 "U4" V 3004 1838 50  0000 L CNN
+F 1 "ILI9341_2.8_TFT" V 3095 1838 50  0000 L CNN
+F 2 "adafruit_modules:adafruit_ILI9341_2.8_double_mode" V 2100 1200 50  0001 C CNN
+F 3 "" V 2100 1200 50  0001 C CNN
+	1    3050 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L Environment_check-rescue:TSL2591-Adafruit_modules U3
+U 1 1 5B8A2080
+P 1800 4250
+F 0 "U3" H 1775 4575 50  0000 C CNN
+F 1 "TSL2591" H 1775 4484 50  0000 C CNN
+F 2 "adafruit_modules:TSL2591" H 1550 4450 50  0001 C CNN
+F 3 "" H 1550 4450 50  0001 C CNN
+	1    1800 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Environment_check-rescue:ADS1115_ADS1015-Adafruit_modules U1
+U 1 1 5B8A20F4
+P 1700 5250
+F 0 "U1" H 1700 5475 50  0000 C CNN
+F 1 "ADS1115_ADS1015" H 1700 5384 50  0000 C CNN
+F 2 "adafruit_modules:ADS1115_ADS1015" H 1700 5250 50  0001 C CNN
+F 3 "" H 1700 5250 50  0001 C CNN
+	1    1700 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5B917314
+P 2850 2650
+F 0 "#PWR011" H 2850 2400 50  0001 C CNN
+F 1 "GND" H 2855 2477 50  0000 C CNN
+F 2 "" H 2850 2650 50  0001 C CNN
+F 3 "" H 2850 2650 50  0001 C CNN
+	1    2850 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 2550 2850 2650
+$Comp
+L power:GND #PWR04
+U 1 1 5B91748D
+P 1150 2600
+F 0 "#PWR04" H 1150 2350 50  0001 C CNN
+F 1 "GND" H 1155 2427 50  0000 C CNN
+F 2 "" H 1150 2600 50  0001 C CNN
+F 3 "" H 1150 2600 50  0001 C CNN
+	1    1150 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 2600 1150 2550
+$Comp
+L power:GND #PWR02
+U 1 1 5B917760
+P 900 4300
+F 0 "#PWR02" H 900 4050 50  0001 C CNN
+F 1 "GND" H 905 4127 50  0000 C CNN
+F 2 "" H 900 4300 50  0001 C CNN
+F 3 "" H 900 4300 50  0001 C CNN
+	1    900  4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 4250 900  4250
+Wire Wire Line
+	900  4250 900  4300
+$Comp
+L power:GND #PWR03
+U 1 1 5B917907
+P 850 5350
+F 0 "#PWR03" H 850 5100 50  0001 C CNN
+F 1 "GND" H 855 5177 50  0000 C CNN
+F 2 "" H 850 5350 50  0001 C CNN
+F 3 "" H 850 5350 50  0001 C CNN
+	1    850  5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 5250 1350 5250
+Wire Wire Line
+	1350 5350 850  5350
+$Comp
+L power:GND #PWR010
+U 1 1 5B917BC1
+P 2100 5750
+F 0 "#PWR010" H 2100 5500 50  0001 C CNN
+F 1 "GND" H 2105 5577 50  0000 C CNN
+F 2 "" H 2100 5750 50  0001 C CNN
+F 3 "" H 2100 5750 50  0001 C CNN
+	1    2100 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR014
+U 1 1 5B9185C7
+P 4550 2800
+F 0 "#PWR014" H 4550 2650 50  0001 C CNN
+F 1 "+5V" V 4565 2928 50  0000 L CNN
+F 2 "" H 4550 2800 50  0001 C CNN
+F 3 "" H 4550 2800 50  0001 C CNN
+	1    4550 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR015
+U 1 1 5B9186BB
+P 4550 3000
+F 0 "#PWR015" H 4550 2850 50  0001 C CNN
+F 1 "+3.3V" V 4565 3128 50  0000 L CNN
+F 2 "" H 4550 3000 50  0001 C CNN
+F 3 "" H 4550 3000 50  0001 C CNN
+	1    4550 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5B918702
+P 6700 1250
+F 0 "#PWR013" H 6700 1000 50  0001 C CNN
+F 1 "GND" H 6705 1077 50  0000 C CNN
+F 2 "" H 6700 1250 50  0001 C CNN
+F 3 "" H 6700 1250 50  0001 C CNN
+	1    6700 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 3000 4600 3000
+Wire Wire Line
+	4600 2800 4550 2800
+$Comp
+L power:+3.3V #PWR06
+U 1 1 5B919316
+P 4700 4300
+F 0 "#PWR06" H 4700 4150 50  0001 C CNN
+F 1 "+3.3V" V 4715 4428 50  0000 L CNN
+F 2 "" H 4700 4300 50  0001 C CNN
+F 3 "" H 4700 4300 50  0001 C CNN
+	1    4700 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5B91932D
+P 4600 4450
+F 0 "#PWR01" H 4600 4200 50  0001 C CNN
+F 1 "GND" H 4605 4277 50  0000 C CNN
+F 2 "" H 4600 4450 50  0001 C CNN
+F 3 "" H 4600 4450 50  0001 C CNN
+	1    4600 4450
+	1    0    0    -1  
+$EndComp
+Text GLabel 1300 5650 0    50   BiDi ~ 0
+SDA
+Text GLabel 1300 5550 0    50   Input ~ 0
+SCL
+Text GLabel 5400 4200 2    50   Input ~ 0
+SCL
+Text GLabel 5400 4400 2    50   BiDi ~ 0
+SDA
+Text GLabel 2250 4250 2    50   BiDi ~ 0
+SDA
+Text GLabel 2250 4350 2    50   Input ~ 0
+SCL
+Wire Wire Line
+	2250 4250 2200 4250
+Wire Wire Line
+	2250 4350 2200 4350
+Wire Wire Line
+	1300 5550 1350 5550
+Wire Wire Line
+	1350 5650 1300 5650
+Text GLabel 2050 3100 2    50   Input ~ 0
+MOSI
+Text GLabel 2050 3200 2    50   Input ~ 0
+MISO
+Text GLabel 2050 3300 2    50   Input ~ 0
+CLK
+Text GLabel 2050 2900 2    50   Input ~ 0
+Data_Command
+Text GLabel 2050 2800 2    50   Input ~ 0
+Reset
+Text GLabel 2050 3000 2    50   Input ~ 0
+ChipSelect
+Wire Wire Line
+	1350 2550 1350 2700
+Wire Wire Line
+	1350 2700 2050 2700
+Wire Wire Line
+	2050 2700 2050 2550
+Wire Wire Line
+	1950 2550 1950 2800
+Wire Wire Line
+	1950 2800 2050 2800
+Wire Wire Line
+	1850 2550 1850 2900
+Wire Wire Line
+	1850 2900 2050 2900
+Wire Wire Line
+	1750 2550 1750 3000
+Wire Wire Line
+	1750 3000 2050 3000
+Wire Wire Line
+	1650 2550 1650 3100
+Wire Wire Line
+	1650 3100 2050 3100
+Wire Wire Line
+	1550 2550 1550 3200
+Wire Wire Line
+	1550 3200 2050 3200
+Wire Wire Line
+	1450 2550 1450 3300
+Wire Wire Line
+	1450 3300 2050 3300
+$Comp
+L power:GND #PWR09
+U 1 1 5B920C71
+P 1300 5800
+F 0 "#PWR09" H 1300 5550 50  0001 C CNN
+F 1 "GND" H 1305 5627 50  0000 C CNN
+F 2 "" H 1300 5800 50  0001 C CNN
+F 3 "" H 1300 5800 50  0001 C CNN
+	1    1300 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 5750 1300 5750
+Wire Wire Line
+	1300 5750 1300 5800
+Text GLabel 4500 2400 0    50   Input ~ 0
+SCL
+Text GLabel 4500 2500 0    50   BiDi ~ 0
+SDA
+Wire Wire Line
+	4500 2400 4600 2400
+Wire Wire Line
+	4600 2500 4500 2500
+Text GLabel 5950 1900 2    50   Input ~ 0
+MOSI
+Text GLabel 5950 2000 2    50   Input ~ 0
+MISO
+Text GLabel 5950 2100 2    50   Input ~ 0
+CLK
+Text GLabel 5950 2200 2    50   Input ~ 0
+ChipSelect
+Wire Wire Line
+	5900 1900 5950 1900
+Wire Wire Line
+	5900 2000 5950 2000
+Wire Wire Line
+	5900 2100 5950 2100
+Text GLabel 5950 2300 2    50   Input ~ 0
+Data_Command
+Text GLabel 5950 2400 2    50   Input ~ 0
+Reset
+Connection ~ 2050 2700
+$Comp
+L Mechanical:MountingHole MH1
+U 1 1 5BB54A05
+P 2800 7700
+F 0 "MH1" H 2900 7746 50  0000 L CNN
+F 1 "MountingHole" H 2900 7655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 2800 7700 50  0001 C CNN
+F 3 "~" H 2800 7700 50  0001 C CNN
+	1    2800 7700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole MH3
+U 1 1 5BB54A3D
+P 3550 7700
+F 0 "MH3" H 3650 7746 50  0000 L CNN
+F 1 "MountingHole" H 3650 7655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 3550 7700 50  0001 C CNN
+F 3 "~" H 3550 7700 50  0001 C CNN
+	1    3550 7700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole MH2
+U 1 1 5BB54A69
+P 2800 7950
+F 0 "MH2" H 2900 7996 50  0000 L CNN
+F 1 "MountingHole" H 2900 7905 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 2800 7950 50  0001 C CNN
+F 3 "~" H 2800 7950 50  0001 C CNN
+	1    2800 7950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole MH4
+U 1 1 5BB54A8B
+P 3550 7950
+F 0 "MH4" H 3650 7996 50  0000 L CNN
+F 1 "MountingHole" H 3650 7905 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 3550 7950 50  0001 C CNN
+F 3 "~" H 3550 7950 50  0001 C CNN
+	1    3550 7950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5BB597EB
+P 3900 2950
+F 0 "#PWR0101" H 3900 2700 50  0001 C CNN
+F 1 "GND" H 3905 2777 50  0000 C CNN
+F 2 "" H 3900 2950 50  0001 C CNN
+F 3 "" H 3900 2950 50  0001 C CNN
+	1    3900 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2900 3900 2900
+Wire Wire Line
+	3900 2900 3900 2950
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5BB5BB6C
+P 1350 4150
+F 0 "#PWR0102" H 1350 4000 50  0001 C CNN
+F 1 "+3.3V" V 1365 4278 50  0000 L CNN
+F 2 "" H 1350 4150 50  0001 C CNN
+F 3 "" H 1350 4150 50  0001 C CNN
+	1    1350 4150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6700 1200 6700 1250
+Wire Wire Line
+	5900 1200 6000 1200
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 5BB534EB
+P 1300 2950
+F 0 "#PWR0105" H 1300 2800 50  0001 C CNN
+F 1 "+3.3V" V 1315 3078 50  0000 L CNN
+F 2 "" H 1300 2950 50  0001 C CNN
+F 3 "" H 1300 2950 50  0001 C CNN
+	1    1300 2950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1350 2700 1350 2950
+Wire Wire Line
+	1350 2950 1300 2950
+Connection ~ 1350 2700
+Wire Wire Line
+	4700 4400 4600 4400
+Wire Wire Line
+	4600 4400 4600 4450
+$Comp
+L power:+3.3V #PWR0106
+U 1 1 5BB56585
+P 4700 6300
+F 0 "#PWR0106" H 4700 6150 50  0001 C CNN
+F 1 "+3.3V" V 4715 6428 50  0000 L CNN
+F 2 "" H 4700 6300 50  0001 C CNN
+F 3 "" H 4700 6300 50  0001 C CNN
+	1    4700 6300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5BB565A6
+P 4700 6400
+F 0 "#PWR0107" H 4700 6150 50  0001 C CNN
+F 1 "GND" H 4705 6227 50  0000 C CNN
+F 2 "" H 4700 6400 50  0001 C CNN
+F 3 "" H 4700 6400 50  0001 C CNN
+	1    4700 6400
+	1    0    0    -1  
+$EndComp
+Text GLabel 5350 6300 2    50   Input ~ 0
+SCL
+Text GLabel 5350 6200 2    50   BiDi ~ 0
+SDA
+$Comp
+L power:+3.3V #PWR0103
+U 1 1 5BB579B6
+P 5900 1300
+F 0 "#PWR0103" H 5900 1150 50  0001 C CNN
+F 1 "+3.3V" V 5915 1428 50  0000 L CNN
+F 2 "" H 5900 1300 50  0001 C CNN
+F 3 "" H 5900 1300 50  0001 C CNN
+	1    5900 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 5BB540F1
+P 1300 5250
+F 0 "#PWR0104" H 1300 5100 50  0001 C CNN
+F 1 "+3.3V" V 1315 5378 50  0000 L CNN
+F 2 "" H 1300 5250 50  0001 C CNN
+F 3 "" H 1300 5250 50  0001 C CNN
+	1    1300 5250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5900 1100 6000 1100
+Wire Wire Line
+	6000 1100 6000 1200
+Connection ~ 6000 1200
+Wire Wire Line
+	6000 1200 6700 1200
+Wire Wire Line
+	2750 2700 2750 2550
+Wire Wire Line
+	2050 2700 2550 2700
+Wire Wire Line
+	2650 2550 2650 2700
+Connection ~ 2650 2700
+Wire Wire Line
+	2650 2700 2750 2700
+Wire Wire Line
+	2550 2550 2550 2700
+Connection ~ 2550 2700
+Wire Wire Line
+	2550 2700 2650 2700
+$Comp
+L Environment_check-rescue:VEML6075-Adafruit_modules U5
+U 1 1 5BC6DF5A
+P 5000 6150
+F 0 "U5" H 5025 6325 50  0000 C CNN
+F 1 "VEML6075" H 5025 6234 50  0000 C CNN
+F 2 "adafruit_modules:VEML6075" H 5000 6200 50  0001 C CNN
+F 3 "" H 5000 6200 50  0001 C CNN
+	1    5000 6150
+	1    0    0    -1  
+$EndComp
+Text Notes 2500 6000 0    50   ~ 0
+Sleeve - Ground\nRing - Black (A0)\nTip - Red (A1)
+Wire Wire Line
+	2050 5550 2150 5550
+Wire Wire Line
+	2050 5450 2100 5450
+$Comp
+L Environment_check-rescue:Audio_3.5mm-Connectors J1
+U 1 1 5BC8794B
+P 2250 5700
+F 0 "J1" H 1272 5501 50  0000 R CNN
+F 1 "Audio_3.5mm" H 1272 5410 50  0000 R CNN
+F 2 "sparkfun_modules:Audio 3.5 Jack [4Ucon 08780]" H 2350 5750 50  0001 C CNN
+F 3 "" H 2350 5750 50  0001 C CNN
+	1    2250 5700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2150 5250 2100 5250
+Wire Wire Line
+	2100 5250 2100 5450
+Wire Wire Line
+	2150 5650 2100 5650
+Wire Wire Line
+	2100 5650 2100 5750
+$Comp
+L Environment_check-rescue:BM__80-Adafruit_modules U2
+U 1 1 5BC98749
+P 5050 4300
+F 0 "U2" H 5050 4625 50  0000 C CNN
+F 1 "BM__80" H 5050 4534 50  0000 C CNN
+F 2 "adafruit_modules:BME280_BMP280_BME680" H 4900 4550 50  0001 C CNN
+F 3 "" H 4900 4550 50  0001 C CNN
+	1    5050 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 2200 5900 2200
+Wire Wire Line
+	5950 2300 5900 2300
+Wire Wire Line
+	5950 2400 5900 2400
+NoConn ~ 1150 950 
+NoConn ~ 1250 950 
+NoConn ~ 1350 950 
+NoConn ~ 1450 950 
+NoConn ~ 1550 950 
+NoConn ~ 1650 950 
+NoConn ~ 1750 950 
+NoConn ~ 1850 950 
+NoConn ~ 1950 950 
+NoConn ~ 2050 950 
+NoConn ~ 2150 950 
+NoConn ~ 2250 950 
+NoConn ~ 2350 950 
+NoConn ~ 2450 950 
+NoConn ~ 2550 950 
+NoConn ~ 2650 950 
+NoConn ~ 2750 950 
+NoConn ~ 2850 950 
+NoConn ~ 2950 950 
+NoConn ~ 3050 950 
+NoConn ~ 3050 2550
+NoConn ~ 2950 2550
+NoConn ~ 2450 2550
+NoConn ~ 2350 2550
+NoConn ~ 2250 2550
+NoConn ~ 2150 2550
+NoConn ~ 1250 2550
+NoConn ~ 4600 1100
+NoConn ~ 4600 1200
+NoConn ~ 4600 1300
+NoConn ~ 4600 1400
+NoConn ~ 4600 1500
+NoConn ~ 4600 1600
+NoConn ~ 4600 1700
+NoConn ~ 4600 1800
+NoConn ~ 4600 1900
+NoConn ~ 4600 2300
+NoConn ~ 4600 2200
+NoConn ~ 4600 2100
+NoConn ~ 4600 2000
+NoConn ~ 5900 1400
+NoConn ~ 5900 1500
+NoConn ~ 5900 1600
+NoConn ~ 5900 1700
+NoConn ~ 5900 1800
+NoConn ~ 4600 2600
+NoConn ~ 4600 2700
+NoConn ~ 5900 2500
+NoConn ~ 5900 2600
+NoConn ~ 5900 2700
+NoConn ~ 5900 2800
+NoConn ~ 5900 2900
+NoConn ~ 5900 3000
+NoConn ~ 2200 4150
+NoConn ~ 1350 4350
+NoConn ~ 4700 4200
+NoConn ~ 5400 4300
+NoConn ~ 5400 4500
+NoConn ~ 2050 5650
+NoConn ~ 2050 5750
+NoConn ~ 2150 5350
+NoConn ~ 2150 5450
+NoConn ~ 4700 6200
+$EndSCHEMATC
