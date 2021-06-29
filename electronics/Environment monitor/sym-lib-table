@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name Environment_check-rescue)(type Legacy)(uri ${KIPRJMOD}/Environment_check-rescue.lib)(options "")(descr ""))
-)
